@@ -20,6 +20,7 @@ public class Screenshot : MonoBehaviour
         ss.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
         ss.Apply();
 
+
         NativeGallery.SaveImageToGallery(ss, "AR_Screenshots", DateTime.Now.ToString().Replace("/","-"));
         _UI.SetActive(true);
     }
